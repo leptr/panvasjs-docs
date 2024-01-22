@@ -40,7 +40,7 @@ const Examples = () => {
             className="live-demo"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://leptr.com/panvasjs/examples/flappy-bird"
+            href="https://panvasjs.leptr.com/examples/flappy-bird"
           >
             Live Demo
           </a>
@@ -71,7 +71,7 @@ const Examples = () => {
             className="live-demo"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://leptr.com/panvasjs/examples/pong"
+            href="https://panvasjs.leptr.com/examples/pong"
           >
             Live Demo
           </a>
@@ -104,7 +104,7 @@ const Examples = () => {
             className="live-demo"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://leptr.com/panvasjs/examples/raycasting"
+            href="https://panvasjs.leptr.com/examples/raycasting"
           >
             Live Demo
           </a>
