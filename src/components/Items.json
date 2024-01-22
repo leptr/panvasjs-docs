@@ -1,0 +1,741 @@
+{
+  "variables": [
+    {
+      "name": "mobile",
+      "body": "Variable that equates to true if the code is opened from a mobile device or false if it is not. It can come in useful if you have special control buttons for mobile devices."
+    },
+    {
+      "name": "width",
+      "body": "Contains the width of the main canvas element in pixels."
+    },
+    {
+      "name": "height",
+      "body": "Contains the height of the main canvas element in pixels."
+    },
+    {
+      "name": "innerWidth",
+      "body": "Contains the inner width of the browser window in pixels."
+    },
+    {
+      "name": "innerHeight",
+      "body": "Contains the inner height of the browser window in pixels."
+    },
+    {
+      "name": "mouseX",
+      "body": "Contains the current X coordinate of the cursor inside the browser window."
+    },
+    {
+      "name": "mouseY",
+      "body": "Contains the current Y coordinate of the cursor inside the browser window."
+    },
+    {
+      "name": "cMouseX",
+      "body": "Contains the current X coordinate of the cursor inside the main canvas element. The value is constrained within the canvas X and Y coordinates."
+    },
+    {
+      "name": "cMouseY",
+      "body": "Contains the current Y coordinate of the cursor inside the main canvas element. The value is constrained within the canvas X and Y coordinates."
+    },
+    {
+      "name": "PI",
+      "body": "Equates to the PI constant. Useful for various mathematical equations."
+    },
+    {
+      "name": "TWO_PI",
+      "body": "Equates to 2 * PI. Useful for various mathematical equations."
+    },
+    {
+      "name": "HALF_PI",
+      "body": "Equates to 1/2 of PI. Useful for various mathematical equations."
+    },
+    {
+      "name": "E",
+      "body": "Equates to the Euler's number. Useful for various mathematical equations."
+    },
+    {
+      "name": "SQRT2",
+      "body": "Equates to the square root of 2. Useful for various mathematical equations."
+    },
+    {
+      "name": "SQRT1_2",
+      "body": "Equates to the square root of 1/2. Useful for various mathematical equations."
+    },
+    {
+      "name": "LN2",
+      "body": "Equates to the natural logarithm of 2. Useful for various mathematical equations."
+    },
+    {
+      "name": "LN10",
+      "body": "Equates to the natural logarithm of 10. Useful for various mathematical equations."
+    },
+    {
+      "name": "LOG2E",
+      "body": "Equates to the natural logarithm of Euler's number. Useful for various mathematical equations."
+    },
+    {
+      "name": "LOG10E",
+      "body": "Equates to the base 10 logarithm of Euler's number. Useful for various mathematical equations."
+    },
+    {
+      "name": "frameCount",
+      "body": "Contains the total number of frames that have been rendered since the main loop started running."
+    },
+    {
+      "name": "frameRate",
+      "body": "Contains the current refresh rate of the canvas in frames per second. You should never change this variable manually, instead use the framerate function."
+    },
+    {
+      "name": "mousePressed",
+      "body": "Equals to true if the mouse is currently pressed down, or to false if the mouse is not pressed."
+    },
+    {
+      "name": "KEY",
+      "body": "A global object containing every single key on the standard US keyboard. You can use this to check the keyCode value against the keys for easier development. (e.g: if (keyCode == KEY.UP_ARROW)"
+    },
+    {
+      "name": "UP, DOWN, LEFT, RIGHT, CENTER, START, END, CORNER",
+      "body": "Directional variables used as a global standard for checking or defining a direction of something. Used by the swipe function."
+    }
+  ],
+  "functions": [
+    {
+      "name": "setup()*",
+      "body": "Main setup function that is ran once when the page is loaded. It is created by the user and required by PanvasJS in order to run the code."
+    },
+    {
+      "name": "update()*",
+      "body": "Main loop function that is ran 60 times per second by default. It is created by the user and required by PanvasJS in order to run the code."
+    },
+    {
+      "name": "createCanvas(width, height, canvas)",
+      "body": "Returns a Canvas object with the provided width and height values.\nCanvas is an optional argument that can be provided to use an existing canvas element with the provided ID."
+    },
+    {
+      "name": "preload()",
+      "body": "This function can be defined by the user in order to preload images, sounds, or similar things before the page is loaded. It runs before the setup function."
+    },
+    {
+      "name": "autoUpdate(object)",
+      "body": "The provided object will be auto-updated each frame. The object must have an update method."
+    },
+    {
+      "name": "stopAutoUpdate(object)",
+      "body": "The provided object will stop being auto-updated when the function is called."
+    },
+    {
+      "name": "include(path, callback)",
+      "body": "Includes another JavaScript file for further use. A callback function is optional and is called after the file has been loaded."
+    },
+    {
+      "name": "noCanvas()",
+      "body": "It can be called inside the setup function. It allows the code to run the setup and update functions without a canvas."
+    },
+    {
+      "name": "framerate(newFramerate)",
+      "body": "It changes the refresh rate of the canvas and the update function. Please note that this affects how often the code inside the update function will be executed."
+    },
+    {
+      "name": "setTitle(title)",
+      "body": "Sets the title of the web page to the title provided in the function."
+    },
+    {
+      "name": "map(num, a, b, c, d)",
+      "body": "Takes in a number that ranges in value from a to b, and maps it to a new equivalent value in the range from c to d."
+    },
+    {
+      "name": "random(num1, num2)",
+      "body": "Returns a random float between num1 and num2.\nIf only one number is provided, it will return a random float between 0 and the provided number.\nIf no argument is provided, it will return a random value between 0 and 1.\nIt also accepts an array as an argument, in which case it will return a random element of the provided array."
+    },
+    {
+      "name": "randInt(num1, num2)",
+      "body": "Returns a random integer between num1 and num2.\nIf only one number is provided, it will return a random integer between 0 and the provided number.\nAt least one argument must be provided."
+    },
+    {
+      "name": "floor(num)",
+      "body": "Rounds the provided number to the next lower integer."
+    },
+    {
+      "name": "ceil(num)",
+      "body": "Rounds the provided number to the next higher integer."
+    },
+    {
+      "name": "round(num)",
+      "body": "Rounds the provided number to the closest integer."
+    },
+    {
+      "name": "pow(num, pow)",
+      "body": "Returns the number provided to the power of the second number."
+    },
+    {
+      "name": "sqr(num)",
+      "body": "Returns the square of the provided number."
+    },
+    {
+      "name": "sqrt(num)",
+      "body": "Returns the square root of the provided number."
+    },
+    {
+      "name": "abs(num)",
+      "body": "Returns the absolute value of the provided number."
+    },
+    {
+      "name": "sin(angle)",
+      "body": "Returns the sine of the provided angle."
+    },
+    {
+      "name": "cos(angle)",
+      "body": "Returns the sine of the provided angle."
+    },
+    {
+      "name": "asin(num)",
+      "body": "Returns the arc sine of the provided angle."
+    },
+    {
+      "name": "acos(num)",
+      "body": "Returns the arc cosine of the provided angle."
+    },
+    {
+      "name": "tan(angle)",
+      "body": "Returns the tangent of the provided angle."
+    },
+    {
+      "name": "atan(num)",
+      "body": "Returns the arc tangent of the provided angle."
+    },
+    {
+      "name": "exp(num)",
+      "body": "Returns E to the power of the provided number."
+    },
+    {
+      "name": "log(num)",
+      "body": "Returns the natural logarithm of the provided number with base E."
+    },
+    {
+      "name": "min(num1, num2...)",
+      "body": "Returns the lowest number from the numbers provided. Takes numbers as multiple arguments."
+    },
+    {
+      "name": "max(nums)",
+      "body": "Returns the highest number from the numbers provided. Takes numbers as multiple arguments."
+    },
+    {
+      "name": "write(text)",
+      "body": "Writes the provided text to the document."
+    },
+    {
+      "name": "print(text)",
+      "body": "Prints the provided text to the console."
+    },
+    {
+      "name": "table(array)",
+      "body": "Presents the provided array as a table in the console."
+    },
+    {
+      "name": "error(text)",
+      "body": "Prints the provided text to the console as an error."
+    },
+    {
+      "name": "warn(text)",
+      "body": "Prints the provided text to the console as a warning."
+    },
+    {
+      "name": "setText(elementId, text)",
+      "body": "Writes the provided text to the page element with the provided ID."
+    },
+    {
+      "name": "keyDown(keyCode)",
+      "body": "Activates when a key on the keyboard is pressed. It receives a keyCode argument which contains the code of the key that was pressed.\nThe function is created by the user."
+    },
+    {
+      "name": "keyUp(keyCode)",
+      "body": "Activates when a key on the keyboard is released. It receives a keyCode argument which contains the code of the key that was pressed.\nThe function is created by the user."
+    },
+    {
+      "name": "mouseDown()",
+      "body": "Activates when the left mouse button is pressed down.\nThe function is created by the user."
+    },
+    {
+      "name": "mouseMove()",
+      "body": "Activates when the left mouse button is pressed and the mouse is moving.\nThe function is created by the user."
+    },
+    {
+      "name": "mouseUp()",
+      "body": "Activates when the left mouse button is released.\nThe function is created by the user."
+    },
+    {
+      "name": "touchStart(touches)",
+      "body": "Activates only on touchscreen devices when the screen has been touched. It receives an array as an argument which contains all the information about all of the touches on the screen.\nThe function is created by the user."
+    },
+    {
+      "name": "touchMove()",
+      "body": "Activates only on touchscreen devices when a touch has moved. It receives an array as an argument which contains all the information about all of the touches on the screen.\nThe function is created by the user."
+    },
+    {
+      "name": "touchEnd()",
+      "body": "Activates only on touchscreen devices when the touch has ended. It receives an array as an argument which contains all the information about all of the touches on the screen.\nThe function is created by the user."
+    },
+    {
+      "name": "swipe(dir)",
+      "body": "Activates only on touchscreen devices when a user swipes the screen on the device. It receives an argument dir which contains the direction of the swipe.\nThe direction can either be equal to UP, DOWN, LEFT, or RIGHT."
+    },
+    {
+      "name": "createVector(x, y)",
+      "body": "Returns a Vector object with the provided X and Y values. If X and Y are not provided, it returns a zero vector."
+    },
+    {
+      "name": "randomVector(magnitude)",
+      "body": "Returns a random Vector object. Takes an optional argument for the magnitude.\nIf provided, the returned vector will have the given magnitude, otherwise, the magnitude is set to 1."
+    },
+    {
+      "name": "createPoint(x, y)",
+      "body": "Returns a Point object with the provided X and Y values. If X and Y are not provided, it returns a 0,0 point."
+    },
+    {
+      "name": "randomPoint()",
+      "body": "Returns a Point object at a random position on the canvas."
+    },
+    {
+      "name": "Vector.fromAngle(angle)",
+      "body": "Returns a Vector object created from the provided angle with a magnitude of 1."
+    },
+    {
+      "name": "color(red, green, blue, alpha)",
+      "body": "Returns a color string from the provided RGBA values."
+    },
+    {
+      "name": "isInArray(array, element)",
+      "body": "Returns the index of the provided element if it is present in the given array. Returns false if the element is not present inside the array."
+    },
+    {
+      "name": "removeFromArray(array, element)",
+      "body": "Removes the provided element from the given array if it is present inside it."
+    },
+    {
+      "name": "createMatrix(columns, rows)",
+      "body": "Returns a 2D array with the provided number of columns and rows."
+    },
+    {
+      "name": "distance(x1, y1, x2, y2)",
+      "body": "Returns the distance between the two provided sets of coordinates. It can be provided only two arguments if they are of the Vector or Point class."
+    },
+    {
+      "name": "swap(array, index1, index2)",
+      "body": "Swaps the places of the items at the given indices inside the provided array."
+    },
+    {
+      "name": "sort(array)",
+      "body": "Sorts the provided array."
+    },
+    {
+      "name": "toRadians(degrees)",
+      "body": "Converts the provided angle in degrees to radians."
+    },
+    {
+      "name": "toDegrees(radians)",
+      "body": "Converts the provided angle in radians to degrees."
+    },
+    {
+      "name": "constrain(num, min, max)",
+      "body": "Constrains the provided number between the two given values. It needs to be called in a loop in order to constantly keep a number constrained."
+    },
+    {
+      "name": "lerp(value1, value2, step)",
+      "body": "Linear Interpolation - smooth transitioning between two values with the step given.\nThe step must be a value between 0 and 1."
+    },
+    {
+      "name": "joinArray(array, spacing)",
+      "body": "Returns a string of all the elements in the given array divided by the spacing provided.\nIf the spacing is not provided, it will return the string of all the elements concatenated without any spaces."
+    },
+    {
+      "name": "removeChars(text, characters)",
+      "body": "Takes two strings as an input. The characters argument must be a string containing all the characters that you want removed from the original string."
+    },
+    {
+      "name": "removeCharAt(text, index)",
+      "body": "Removes the character at the given index from the provided string."
+    },
+    {
+      "name": "replaceCharAt(text, index, replacement)",
+      "body": "Replaces the character at the given index from the provided string with the replacement provided."
+    },
+    {
+      "name": "Storage.save(name, data)",
+      "body": "Saves provided data at the given name inside the local storage. The local storage is preserved after the page has been refreshed."
+    },
+    {
+      "name": "Storage.load(name)",
+      "body": "Loads data from the local storage under the given name."
+    },
+    {
+      "name": "Storage.removeItem(name)",
+      "body": "Removed the data under the given name from the local storage."
+    },
+    {
+      "name": "Storage.clear()",
+      "body": "Clears all saved data from the local storage."
+    },
+    {
+      "name": "Storage.itemAtIndex(index)",
+      "body": "Returns the data from the local storage at the given index. It can be used for iterating through the stored data."
+    }
+  ],
+  "canvas": {
+    "attributes": [
+      {
+        "name": "width",
+        "body": "Contains the width of the main canvas element in pixels."
+      },
+      {
+        "name": "height",
+        "body": "Contains the height of the main canvas element in pixels."
+      },
+      {
+        "name": "maxWidth",
+        "body": "Contains the maximum width of the canvas. It is set to 99000 by default."
+      },
+      {
+        "name": "maxHeight",
+        "body": "Contains the maximum height of the canvas. It is set to 99000 by default."
+      },
+      {
+        "name": "canvas",
+        "body": "Points to the actual canvas element inside the page."
+      },
+      {
+        "name": "ctx",
+        "body": "Contains the context of the main canvas element."
+      },
+      {
+        "name": "isPaused",
+        "body": "It can either be true or false based on whether the canvas is paused or not."
+      }
+    ],
+    "methods": [
+      {
+        "name": "setSize(newWidth, newHeight)",
+        "body": "Changes the dimensions of the canvas element to the provided values. If only one value is provided, both the width and the height will be changed to that value."
+      },
+      {
+        "name": "setMaxSize(newMaxWidth, newMaxHeight)",
+        "body": "Changes the maximum width and height of the canvas element to the provided values. If only one value is provided, both the max width and the max height will be changed to that value."
+      },
+      {
+        "name": "fullScreen()",
+        "body": "Changes the canvas dimensions to take up the whole page."
+      },
+      {
+        "name": "clear()",
+        "body": "Clears the whole canvas. Called every frame by default."
+      },
+      {
+        "name": "background(r, g, b, a)",
+        "body": "Changes the color of the canvas to the provided RGBA value. The color is black by default."
+      },
+      {
+        "name": "fill(r, g, b, a)",
+        "body": "Changes the color of the canvas to the provided RGBA value. The fill color is used when drawing shapes or lines on the canvas. The color is white by default."
+      },
+      {
+        "name": "noFill()",
+        "body": "Removes the fill color of the canvas."
+      },
+      {
+        "name": "stroke(r, g, b, a)",
+        "body": "Changes the stroke color of the canvas to the provided RGBA value. The stroke color is used when drawing shapes or lines on the canvas. The color is white by default."
+      },
+      {
+        "name": "noStroke()",
+        "body": "Removes the stroke color of the canvas."
+      },
+      {
+        "name": "lineWidth(width)",
+        "body": "Changes the stroke width of the shapes drawn on the canvas. The width is 1px by default."
+      },
+      {
+        "name": "line(x1, y1, x2, y2)",
+        "body": "Draws a line on the canvas between the two provided sets of coordinates. The width of the line equals to the stroke width."
+      },
+      {
+        "name": "lineFromVector(vector)",
+        "body": "Draws a line on the canvas generated from the provided Vector object. The length of the line equals to the vector's magnitude. The width of the line equals to the stroke width."
+      },
+      {
+        "name": "lineFromAngle(x, y, angle, length)",
+        "body": "Draws a line on the canvas at the provided coordinates with the given length, at the given angle. The width of the line equals to the stroke width."
+      },
+      {
+        "name": "rect(x, y, width, height)",
+        "body": "Draws a rectangle on the canvas at the provided coordinates with the given width and height."
+      },
+      {
+        "name": "rectMode(mode)",
+        "body": "Sets the drawing mode for rectangles on the canvas. Takes the CENTER or CORNER global variable as an argument."
+      },
+      {
+        "name": "point(x, y)",
+        "body": "Draws a point on the canvas at the provided coordinates. The size of the point equals to the stroke width."
+      },
+      {
+        "name": "circle(x, y, radius)",
+        "body": "Draws a circle on the canvas at the provided coordinates with the given radius."
+      },
+      {
+        "name": "ellipse(x, y, width, height, rotation)",
+        "body": "Draws an ellipse on the canvas at the provided coordinates, with the given width and height. Takes an optional rotation argument that can rotate the elipse on the canvas."
+      },
+      {
+        "name": "arc(x, y, radius, startAngle, endAngle)",
+        "body": "Draws an arc on the canvas at the provided coordinates with the given arguments."
+      },
+      {
+        "name": "beginShape(x, y)",
+        "body": "Starts drawing a shape on the canvas at the provided coordinates."
+      },
+      {
+        "name": "vertex(x, y)",
+        "body": "Adds a vertex to the shape that is being drawn at the provided coordinates. It can only be used after starting a shape using the beginShape method."
+      },
+      {
+        "name": "closeShape()",
+        "body": "Closes the shape that is being drawn on the canvas. Must be called after using the beginShape method."
+      },
+      {
+        "name": "text(text, x, y, fontSize, fontName)",
+        "body": "Draws the provided text on the canvas at the given coordinates, with the given arguments."
+      },
+      {
+        "name": "textAlign(alignment)",
+        "body": "Sets the alignment for the displayed text. Takes the START, END, LEFT, RIGHT, or CENTER global variables as an argument."
+      },
+      {
+        "name": "translate(x, y)",
+        "body": "Translates the canvas starting point to the provided coordinates."
+      },
+      {
+        "name": "rotate(angle)",
+        "body": "Rotates the whole canvas by the given angle."
+      },
+      {
+        "name": "scale(widthScale, heightScale)",
+        "body": "Scales the canvas width and height to the provided scale values. If one value is provided, both the width and height will be scaled by it\nThe canvas scale can be reset to 1 by calling the scale method with no arguments."
+      },
+      {
+        "name": "save()",
+        "body": "Saves the current state of the canvas."
+      },
+      {
+        "name": "restore()",
+        "body": "Restores the last saved state of the canvas."
+      },
+      {
+        "name": "screenshot(name)",
+        "body": "Takes a screenshot of the canvas and downloads it as a PNG image with the given name."
+      },
+      {
+        "name": "playPause()",
+        "body": "Toggles the canvas updates. If it is playing, it will pause it, and vice-versa."
+      },
+      {
+        "name": "pause()",
+        "body": "Pauses the canvas updates."
+      },
+      {
+        "name": "play()",
+        "body": "Resumes the canvas updates."
+      },
+      {
+        "name": "drawImage(image, sx, sy, swidth, sheight, x, y, width, height)",
+        "body": "Draws an image on the canvas at the provided X and Y coordinates with the given width and height.\nThe image argument must be an Image object.\nThe width and height are optional arguments. If they are provided, the image will be scaled to the given values.\nThe sx and sy arguments are optional arguments and they determine the starting coordinates for the image crop.\nThe swidth and sheight arguments are optional arguments that define the width and height of the image crop."
+      }
+    ]
+  },
+  "vector": {
+    "attributes": [
+      {
+        "name": "x",
+        "body": "The X coordinate of the vector."
+      },
+      {
+        "name": "y",
+        "body": "The Y coordinate of the vector."
+      },
+      {
+        "name": "previousX",
+        "body": "The previous X coordinate of the vector."
+      },
+      {
+        "name": "previousY",
+        "body": "The previous Y coordinate of the vector."
+      }
+    ],
+    "methods": [
+      {
+        "name": "set(newX, newY)",
+        "body": "Changes the vector X and Y coordinates to the provided new coordinates."
+      },
+      {
+        "name": "add(vector2)",
+        "body": "Adds the provided second vector to the vector itself."
+      },
+      {
+        "name": "subtract(vector2)",
+        "body": "Subtracts the provided second vector from the vector itself."
+      },
+      {
+        "name": "multiply(num)",
+        "body": "Multiplies the vector by the given number."
+      },
+      {
+        "name": "divide(num)",
+        "body": "Divides the vector by the given number."
+      },
+      {
+        "name": "angle()",
+        "body": "Returns the angle of the vector relative to the X axis."
+      },
+      {
+        "name": "rotate(angle)",
+        "body": "Rotates the vector by the given angle."
+      },
+      {
+        "name": "magintude()",
+        "body": "Returns the magnitude (length) of the vector."
+      },
+      {
+        "name": "magnitudeSqr()",
+        "body": "Returns the squared magnitude (length) of the vector."
+      },
+      {
+        "name": "setMagnitude(newMagnitude)",
+        "body": "Changes the magnitude (length) of the vector to the provided value."
+      },
+      {
+        "name": "limit(minMagnitude, maxMagnitude)",
+        "body": "Limits the magnitude (length) of the vector to the provided min and max values."
+      },
+      {
+        "name": "copy()",
+        "body": "Returns a copy of the vector as a new Vector object."
+      },
+      {
+        "name": "normalize()",
+        "body": "Normalizes the vector by setting its magnitude to 1."
+      },
+      {
+        "name": "distance(vector2)",
+        "body": "Returns the distance between the vector and the provided second vector."
+      },
+      {
+        "name": "isOffScreen()",
+        "body": "Returns true or false based on whether the vector is outside the canvas bounds or not."
+      },
+      {
+        "name": "lerp(vector2, step)",
+        "body": "Linear Interpolation - smooth transitioning between two values with the step given. It will slowly transition the vector X and Y values to those of the second vector.\nThe step must be a value between 0 and 1."
+      },
+      {
+        "name": "constrain(minX, maxX, minY, maxY)",
+        "body": "Constrains the vector X and Y coordinates between the provided min and max values."
+      }
+    ]
+  },
+  "point": {
+    "attributes": [
+      {
+        "name": "x",
+        "body": "The X coordinate of the point."
+      },
+      {
+        "name": "y",
+        "body": "The Y coordinate of the point."
+      }
+    ],
+    "methods": [
+      {
+        "name": "distance(point2)",
+        "body": "Returns the distance between the point and the provided second point."
+      },
+      {
+        "name": "isOffScreen()",
+        "body": "Returns true or false based on whether the point is outside the canvas bounds or not."
+      }
+    ]
+  },
+  "color": {
+    "attributes": [
+      {
+        "name": "red",
+        "body": "Contains the red value of the color."
+      },
+      {
+        "name": "green",
+        "body": "Contains the green value of the color."
+      },
+      {
+        "name": "blue",
+        "body": "Contains the blue value of the color."
+      },
+      {
+        "name": "alpha",
+        "body": "Contains the alpha value of the color."
+      }
+    ],
+    "methods": [
+      {
+        "name": "randomize(randomizeAlpha)",
+        "body": "Returns a random shade of the original color as a new Color object. The randomizeAlpha argument is an optional argument that can either be true or false and determines whether the alpha should be randomized as well."
+      },
+      {
+        "name": "color()",
+        "body": "Returns the color as a string."
+      }
+    ]
+  },
+  "image": {
+    "attributes": [
+      {
+        "name": "path",
+        "body": "Contains the path of the image file relative to the HTML file."
+      },
+      {
+        "name": "filename",
+        "body": "Contains the name of the image file."
+      },
+      {
+        "name": "image",
+        "body": "Contains the image element."
+      }
+    ],
+    "methods": []
+  },
+  "sound": {
+    "attributes": [
+      {
+        "name": "path",
+        "body": "Contains the path of the sound file relative to the HTML file."
+      },
+      {
+        "name": "filename",
+        "body": "Contains the name of the sound file."
+      },
+      {
+        "name": "audio",
+        "body": "Contains the audio element."
+      }
+    ],
+    "methods": [
+      {
+        "name": "play()",
+        "body": "Starts playing the audio, or resumes it if stopped."
+      },
+      {
+        "name": "pause()",
+        "body": "Pauses the audio."
+      },
+      {
+        "name": "playPause()",
+        "body": "Toggles the audio. If it is playing, it will pause it, and vice-versa."
+      }
+    ]
+  }
+}
